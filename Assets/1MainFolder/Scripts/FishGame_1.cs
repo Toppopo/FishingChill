@@ -75,14 +75,10 @@ public class FishGame_1 : MonoBehaviour
             {
                 i.SetActive(false);
             }
-            Debug.Log("スペース表示" + spaceObj);
             keyCanvas.SetActive(false);
             spaceObj.SetActive(true);
             ColorReset();
         }//連打開始
-        //Debug.Log("ゲーム開始するか" + fishing.GameStart);
-        Debug.Log("InputType" + inputType);
-        //Debug.Log("ゲージが満タンか" + GageMax);
     }
     private void ShowKeySet()//左右のどっちを出すか
     {
@@ -195,7 +191,6 @@ public class FishGame_1 : MonoBehaviour
         bar.fillAmount -= barAutoDecSpeed * Time.deltaTime;
         if(bar.fillAmount　<= 0)
         {
-            Debug.Log("barが0になった");
             CameraReset();
             fishing.Started = true;
             fishing.GameStart = false;
